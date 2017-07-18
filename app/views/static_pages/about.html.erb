@@ -1,2 +1,32 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<h1>About</h1>
+
+	<div class="container-fluid" id="about">
+		<div class="row">
+			<div class="col-md-4">
+				<%= image_tag("bangles.jpg", class:"img-responsive bangles") %>
+			</div><!--/col-->
+		
+			<div class="col-md-4">
+				<div class="about_square"><h3>At <strong>Desire,</strong><br>we create<br> unique handcrafted<br>pieces for you...</h3>
+					<br><%= image_tag("range_rings.jpg", class:"img-responsive range_rings") %></div>
+			</div><!--/col-->
+		
+			<div class="col-md-4">
+				<%= image_tag("plant_ring.jpg", class:"img-responsive plant_ring") %>
+			</div><!--/col-->
+		</div><!--/row-->
+
+		<div class="row" id="display_images">
+			<div class="col-md-4">
+				<%= image_tag("two_rings.jpg", class:"img-responsive wo_rings") %>
+			</div><!--/col-->
+		
+			<div class="col-md-4">
+				<div class="shop_online"><h4>SHOP ONLINE</h4></div>
+			</div><!--/col-->
+		
+			<div class="col-md-4">
+				<%= image_tag("watch_ring.jpg", class:"img-responsive watch_ring") %>
+			</div><!--/col-->
+		</div><!--/row-->
+	</div><!--/container-->
