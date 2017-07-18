@@ -1,3 +1,47 @@
-// Place all the styles related to the products controller here.
+/*// Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+/* font-family*/
+$sans-serif: Tahoma; 
+$serif: 'Dancing Script', cursive;
+
+/*font weight*/
+$normal: 400; 
+$semibold: 500;
+$bold: 700;
+
+/*colors*/
+$primary-color: #fff;
+$secondary-color: #eee;
+$third-color: #F08080;
+
+/*align*/
+$text-align: center;
+
+/*font-size*/
+$title-size: 3.2em;
+$subheader-size: 1.5em;
+$paragraph-size: 1em;
+
+
+#notice {
+	margin-top: 60px;
+}
+
+.img-catalogue {
+	width: 386px;
+	height: 218px;
+
+}
+
+#product.description {
+	color: $secondary-color;
+}
+
+
+
+
+/* Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
