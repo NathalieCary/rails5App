@@ -13,11 +13,13 @@ class ProductsController < ApplicationController
   end
 
   # GET /products/new
+  #corresponds with create method or action below
   def new
     @product = Product.new
   end
 
   # GET /products/1/edit
+  #corresponds with update method or action below
   def edit
   end
 
