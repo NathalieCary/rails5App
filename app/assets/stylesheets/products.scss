@@ -39,9 +39,54 @@ $paragraph-size: 1em;
 	color: $secondary-color;
 }
 
+#form_list {
+	margin-left: 25%;
+}
 
+.img-catalogue {
+	box-shadow: 2px 2px 5px 3px grey;
+}
 
+#product_links p {
+	display: inline-block;
+	margin-left: 20%;
+	text-decoration: none;
+	color: #F08080;
+}
 
+#product_links p a:hover {
+	text-decoration: none;
+	background-color: #F08080;
+}
+
+#product_links p a:visited {
+	text-decoration: none;
+	color: #DCDCDC;
+}
+
+#new_prod span{
+	color: F08080;
+	font-size: 1.5em;
+	float: right;
+	margin: 10px 30px 10px 0px;
+	display: inline-block;
+	text-decoration: none;
+}
+
+#new_prod span a:hover {
+	background-color: #F08080;
+}
+
+#new_prod h1{
+	float: left;
+	display: inline-block;
+	margin-top: 0;
+	margin-left: 10px;
+}
+
+#prod_info {
+	margin-bottom: 30px;
+}
 /* Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
