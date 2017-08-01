@@ -77,6 +77,23 @@ p {
 	text-align: $text-align;
 }
 
+.btn-default {
+	background-color: #DCDCDC;
+	border-color: #DCDCDC;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+.btn-default:hover {
+	background-color: #DCDCDC;
+	border-color: #eee;
+	color: #F08080;
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+}
+
 /*Navigation Page */
 .navbar-brand {
 	font-family: $serif;
@@ -84,11 +101,10 @@ p {
 	font-weight: $bold;
 }
 
-.navbar-nav li a:active {
-	background-color: $primary-color;
-	color: $third-color;
+.navbar-default .navbar-nav li a:hover {
+	color: #F08080;
+	font-size: 2em;
 }
-
 
 /*Home Page*/
 

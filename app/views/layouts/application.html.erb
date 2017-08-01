@@ -34,8 +34,18 @@
         		<span class="icon-bar"></span>
         		<span class="icon-bar"></span>
       		</button>
-      		<a class="navbar-brand" href="#">Desire</a>
+      		
+          <a class="navbar-brand" href="#">Desire</a>
     		</div>
+
+        <!-- Search Box -->
+
+        <%= form_with(url: products_path, method: 'get', class:"navbar-form navbar-right") do %>
+          <div class="form-group">
+            <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder: "search text") %>
+          </div>
+          <%= submit_tag("Search", class:"btn btn-default") %>
+          <% end %>
 
     		<!-- Collect the nav links, forms, and other content for toggling -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -44,16 +54,16 @@
         		<li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Products", products_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
-        	</ul>
+          </ul>
         </div>
       </div>
 		</nav>
 
     
-        <%= yield %>
+    <%= yield %>
   
 
-  <footer class="footer">
+  <footer class="navbar-fixed-bottom">
     <div class="container-fluid" class="contact_info">
       <div class="row">
         <div class="col-md-4">
