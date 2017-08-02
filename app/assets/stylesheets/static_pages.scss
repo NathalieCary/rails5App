@@ -183,6 +183,23 @@ p {
 	color: $secondary-color;
 }
 
+/* Message Form */
+#message_box {
+	margin-top: 20px;
+}
+
+.form-control {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.artsy_vibes {
+	border-radius: 20%;
+	display: inline-block;
+	width: 450px;
+	height: 300px;
+}
+
 /*Footer*/
 
 .copyright {

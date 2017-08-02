@@ -76,4 +76,32 @@
     </div>
 	</div><!--/container-->
 
+  <!--Message Form -->
+
+  <%= flash[:notice] %>
+
+  <%= form_with(url: "/static_pages/thank_you") do |form| %>
+    <div class="row">
+      <div class="col-md-6" id="message_box">
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+        </div>        
+        <div class="form-group">
+          <%= form.label :email, "Email Address" %>
+          <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :message %>
+          <%= form.text_area :message, class: "form-control", placeholder: "Enter Message" %>
+        </div>        
+      </div>
+      <div class="col-md-6">
+        <%= image_tag("artsy-vibes.jpg", class:"img-responsive artsy_vibes") %>
+      </div>
+    </div>
+    <%= form.submit "Send" %>   
+  <% end %>
+
+
 <%= link_to "Back", root_path %>
