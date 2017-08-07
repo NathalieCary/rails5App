@@ -78,20 +78,17 @@ p {
 }
 
 .btn-default {
-	background-color: #DCDCDC;
-	border-color: #DCDCDC;
-	color: #FFF;
-	text-transform: uppercase;
+	color: #7c7c7c;
+	background-color: #7c7c7c;
 }
 
 .btn-default:hover {
-	background-color: #DCDCDC;
-	border-color: #eee;
 	color: #F08080;
-	-moz-transform: rotate(10deg);
-	-webkit-transform: rotate(10deg);
-	-ms-transform: rotate(10deg);
-	-o-transform: rotate(10deg);
+	background-color: #7c7c7c;
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
 }
 
 /*Navigation Page */
@@ -99,6 +96,16 @@ p {
 	font-family: $serif;
 	font-size: $subheader-size;
 	font-weight: $bold;
+}
+#login a {
+	margin-top: 6px;
+	font-family: $serif;
+	font-size: 1.5em;
+}
+
+#login a:hover {
+	color: #F08080;
+	font-size: 2em;
 }
 
 .navbar-default .navbar-nav li a:hover {

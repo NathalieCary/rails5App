@@ -1,0 +1,60 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* font-family*/
+$sans-serif: Tahoma; 
+$serif: 'Dancing Script', cursive;
+
+/*font weight*/
+$normal: 400; 
+$semibold: 500;
+$bold: 700;
+
+/*colors*/
+$primary-color: #fff;
+$secondary-color: #eee;
+$third-color: #F08080;
+
+/*align*/
+$text-align: center;
+
+/*font-size*/
+$title-size: 3.2em;
+$subheader-size: 1.5em;
+$paragraph-size: 1em;
+
+.members h2 {
+	margin-top: 70px;
+	color: #C2E6DC;
+	font-size: 5em;
+	margin-bottom: 20px;
+	font-family: $serif;
+}
+
+.form-group {
+	color: #C2E6DC;
+	font-size: 1.1em;
+	margin-bottom: 20px;
+}
+
+#devise {
+	width: 50%;
+	margin-left: 25%;
+}
+
+#devise a {
+	color: #C2E6DC;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+#devise a:hover {
+	color: #DCDCDC;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.users {
+	margin-left: 25%;
+}
