@@ -24,6 +24,10 @@ $title-size: 3.2em;
 $subheader-size: 1.5em;
 $paragraph-size: 1em;
 
+h1 {
+	margin-top: 70px;
+}
+
 .members h2 {
 	margin-top: 70px;
 	color: #C2E6DC;
@@ -55,6 +59,29 @@ $paragraph-size: 1em;
 	background-color: transparent;
 }
 
-.users {
+#user_info {
 	margin-left: 25%;
 }
+
+#user_info table {
+	margin-left: 25%;
+}
+
+.alert {
+	margin-top: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
