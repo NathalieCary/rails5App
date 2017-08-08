@@ -62,3 +62,6 @@ end
 
 #Adding gem device for Authentication
 gem 'devise'
+
+#Adding gem CanCanCan for Authorization
+gem 'cancancan', '~> 1.10'

@@ -113,10 +113,18 @@ p {
 	font-size: 2em;
 }
 
+#search {
+	padding-right: 10px;
+}
+
+#search label {
+	text-align : left;
+}
+
 /*Home Page*/
 
 .circle {
-	margin: 60px auto 20px;
+	margin: 80px auto 20px;
   width: 210px;
   height: 210px;
   border: 2px dotted #eee;
@@ -132,6 +140,11 @@ p {
 	font-size: 4.5em;
 }
 
+.circle h2 {
+	margin-top: 0;
+	font-family: $serif;
+	letter-spacing: 3px;
+}
 /*About Page*/
 
 .about_square h3 {
