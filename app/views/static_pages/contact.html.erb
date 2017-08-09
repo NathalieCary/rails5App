@@ -74,34 +74,37 @@
         </div>
       </div>
     </div>
-	</div><!--/container-->
+	
 
-  <!--Message Form -->
+    <!--Message Form -->
 
-  <%= flash[:notice] %>
+    <%= flash[:notice] %>
 
-  <%= form_with(url: "/static_pages/thank_you") do |form| %>
-    <div class="row">
-      <div class="col-md-6" id="message_box">
+    <%= form_tag("/static_pages/thank_you") do %>
+    <div class="form-group row">
+      <div class="col-md-6">
         <div class="form-group">
-          <%= form.label :name %>
-          <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+          <%= label_tag :name %>
+          <%= text_field_tag :name, nil, class: 'form-control', placeholder: "Enter Name", :required => true %>
         </div>        
         <div class="form-group">
-          <%= form.label :email, "Email Address" %>
-          <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+          <%= label_tag :email, "Email Address" %>
+          <%= text_field_tag :email, nil,  class: "form-control", placeholder: "Enter Email", :required => true %>
         </div>
         <div class="form-group">
-          <%= form.label :message %>
-          <%= form.text_area :message, class: "form-control", placeholder: "Enter Message" %>
+          <%= label_tag :message %>
+          <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", :required => true %>
         </div>        
-      </div>
+      <%= submit_tag "Send", class:"btn btn-default" %>   
+      <% end %>  
+      </div>    
+   
       <div class="col-md-6">
         <%= image_tag("artsy-vibes.jpg", class:"img-responsive artsy_vibes") %>
       </div>
     </div>
-    <%= form.submit "Send" %>   
-  <% end %>
+  </div>
+    
 
 
 <%= link_to "Back", root_path %>

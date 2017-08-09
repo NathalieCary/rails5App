@@ -78,7 +78,7 @@ p {
 }
 
 .btn-default {
-	color: #7c7c7c;
+	color: #fff;
 	background-color: #7c7c7c;
 }
 
@@ -111,6 +111,10 @@ p {
 .navbar-default .navbar-nav li a:hover {
 	color: #F08080;
 	font-size: 2em;
+}
+
+.navbar-default .navbar-form {
+	margin-right: 30px;
 }
 
 #search {
@@ -147,31 +151,32 @@ p {
 }
 /*About Page*/
 
-.about_square h3 {
+#about img {
+	box-shadow: 2px 2px 5px 3px grey;
+}
+
+#blurb {
 	letter-spacing: 2px;
 	font-size: $title-size;
   text-align: center;
-  padding-top: 60px;
- }
-
-.about_square img {
-  width: 391px;
-  padding-top: 50px;
+  font-family: $serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
  }
 
  #display_images {
  	margin-top: 25px;
  }
 
-
-.shop_online {
-	font-size: 2em;
-	color: #000;
-  width: 391px;
-  height: 261px;
+#shop_online {
+	font-size: 3em;
+	color: #fff;
   text-align: center;
   background: #DCDCDC;
-  padding-top: 20%;
+  padding-top: 25%;
+  padding-bottom: 30%;
+  margin-top: 0;
+  box-shadow: 2px 2px 5px 3px grey;
   
  }
 
@@ -184,7 +189,7 @@ p {
 }
 
 .panel-group a {
-	color: #F08080;
+	color: #C2E6DC;
 }
 
 .panel-body {

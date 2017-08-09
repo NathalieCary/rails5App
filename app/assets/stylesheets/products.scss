@@ -69,16 +69,21 @@ $paragraph-size: 1em;
 }
 
 #new_prod span{
-	color: F08080;
-	font-size: 1.5em;
-	float: right;
-	margin: 10px 30px 10px 0px;
+	font-size: 1.3em;
+	margin-top: 20px;
 	display: inline-block;
 	text-decoration: none;
 }
 
+#new_prod span a {
+	color: #C2E6DC;
+}
+
 #new_prod span a:hover {
-	background-color: #F08080;
+	background-color: #ddd;
+	color: #fff;
+	padding: 10px;
+	text-decoration: none;
 }
 
 #new_prod h1{
