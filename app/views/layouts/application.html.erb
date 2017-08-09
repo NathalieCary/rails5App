@@ -16,16 +16,8 @@
   </head>
 
   <body>
-    <!--Added flash notice for devise authentication-->
-        <% if notice %>
-          <div id="notice" class="alert alert-success" role="alert"><%= notice %></div>
-        <% end %>
 
-        <% if alert %>
-          <div id="alert" class="alert alert-danger" role="alert"><%= alert %></div>
-        <% end %>
-
-  
+  <!--/NAVIGATION-->
   	<nav class="navbar navbar-default navbar-fixed-top" class="navbar navbar inverse">
   		<div class="container-fluid">
     		<div class="navbar-header">
@@ -36,7 +28,7 @@
         		<span class="icon-bar"></span>
       		</button>
       		
-          <a class="navbar-brand" href="#">Desire</a>
+          <a class="navbar-brand" href="#Home">Desire</a>
     		</div>
 
     		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,33 +38,52 @@
         		<li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Products", products_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
-            <li>
-              <!-- Search Box -->
-              <div class="form-group" id="search">
-                <%= form_with(url: products_path, method: 'get') do |form| %>
-                  <%= form.label :q, 'Search for:' %>
-                  <%= form.text_field :q, id: 'q', value: params[:q] %>
-                  <%= form.submit 'Search' %>
-                <% end %>
-              </div>
-            </li>
-          </ul>
-          <!--adding authentication flow-->
-          <ul class="nav pull-right" id="login">
+
+            <!--ADDED LOG IN FOR AUTHENTICATION FLOW -->
             <li>
               <% if user_signed_in? %>
                 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
               <% else %>
-                <%= link_to('Login', new_user_session_path) %>
+                <%= link_to('Login', new_user_session_path, method: :get) %>
               <% end %>
             </li>
+            <!--ADDED SIGN UP FOR AUTHENTICATION FLOW -->
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to('Edit', edit_user_registration_path, method: :get) %>
+              <% else %>
+                <%= link_to('Sign up', new_user_registration_path, method: :get) %>
+              <% end %>
+            </li>
+            
+
+            <!-- SEARCH BOX-->
+            <%= form_tag("/products", method: "get", class:"navbar-form navbar-right") do %> 
+              <div class="form-group">
+                <%= label_tag(:q, "Search for:", class:"hidden") %>
+                <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"Search") %>
+              </div>
+              <%= submit_tag("Search", class:"btn btn-default") %>
+            <% end %>              
           </ul>
         </div>
       </div>
 		</nav>
 
+    <!--ADDED FLASH NOTICE FOR DEVISE GEM AUTHORIZATION-->
+    <% if notice %>
+      <div id="notice" class="alert alert-success" role="alert"><%= notice %></div>
+    <% end %>
+
+    <% if alert %>
+      <div id="alert" class="alert alert-danger" role="alert"><%= alert %></div>
+    <% end %>
+
+
     
     <%= yield %>
+
+
   
 
     <footer class="navbar-fixed-bottom">
