@@ -80,6 +80,7 @@ p {
 .btn-default {
 	color: #fff;
 	background-color: #7c7c7c;
+	margin-left: 10px;
 }
 
 .btn-default:hover {
@@ -91,6 +92,13 @@ p {
 	-o-transform: rotate(5deg);
 }
 
+.btn-default:visited {
+	color: #eee;
+}
+
+.btn-default.btn-lg {
+	margin-top: 20px;
+}
 /*Navigation Page */
 .navbar-brand {
 	font-family: $serif;
