@@ -5,73 +5,34 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-7">
 				<%= image_tag(@product.image_url, class:"img-responsive thumbnail") %>
-		</div>
-		<br>
-		<br>
-		<br>
-
+		</div><br>
 		<div class="col-xs=12 col-md-5" id="item_info">
 			<p>
-			  <strong>Name:</strong>
-			  <br>
-			  <%= @product.name %>
-			</p>
-			<br>
-
+			  <strong>Name:</strong><br>
+			  	<%= @product.name %>
+			</p><br>
 			<p>
-			  <strong>Description:</strong>
-			  <br>
-			  <%= @product.description %>
-			</p>
-			<br>
-
+			  <strong>Description:</strong><br>
+			  	<%= @product.description %>
+			</p><br>
 			<!--<p>
-			  <strong>Image url:</strong>
-			  <br>
-			  <%= @product.image_url %>
-			</p>
-			<br>-->
-
+			  <strong>Image url:</strong><br>
+			  	<%= @product.image_url %>
+			</p><br>-->
 			<p>
-				<strong>Price:</strong>
-				<br>
-				<%= @product.price %>
+				<strong>Price:</strong><br>
+					<%= @product.price %>
 			</p>
-			<hr>
 
-<!--added a scope code to comment.rb file to select an array of records for best ratings-->
-			<p> 
-				<b>Highest Rating Score:</b> <%= @product.highest_rating_comment.try(:rating) %>
-			</p>
-			<br>
+			<!--added a scope code to comment.rb file to select an array of records for best ratings-->
+			<p> <b>Highest Rating:</b><br><div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p><br>
+			<p> <b>Average Rating:</b><br><div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+		</div>
+	</div>
 
-			<p> 
-				<b>Average Rating Score:</b> <%= @product.average_rating %>
-			</p>
+			<%= render 'new_comment' %>
+			<%= render 'comments' %>
 		
-			<p>
-				<button type="button" class="btn btn-default btn-lg">
-		  		<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
-				</button>
-				<button type="button" class="btn btn-default btn-lg">
-		  		<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
-		  		<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
-				</button>
-				<button type="button" class="btn btn-default btn-lg">
-		  		<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
-		  		<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
-		  		<span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
-				</button>
-			</p>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12 col-md-12" id="comment_block">
-				<h1>Comments</h1>
-
-			</div>
-		</div>
-
 </div><!--/container-->
 <br>
 <br>

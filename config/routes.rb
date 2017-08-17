@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
-  
   resources :users
-	#this route was added manually
-	resources :orders, only: [:index, :show, :create, :destroy]
+	
+	resources :orders, only: [:index, :show, :create, :destroy] #this route was added manually
 
-	#these routes were added with scaffolding
-  resources :products
+  resources :products do
+    resources :comments
+  end
+  
 
   get 'static_pages/about'
 
