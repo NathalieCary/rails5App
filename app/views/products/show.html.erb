@@ -25,8 +25,14 @@
 			</p>
 
 			<!--added a scope code to comment.rb file to select an array of records for best ratings-->
-			<p> <b>Highest Rating:</b><br><div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p><br>
-			<p> <b>Average Rating:</b><br><div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+			<p> 
+				<b>Highest Rating:</b>
+					<div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div>
+			</p><br>
+			<p> 
+				<b>Average Rating:</b>
+					<div class="rated" data-score="<%= @product.average_rating %>"></div> 
+			</p>
 		</div>
 	</div>
 
