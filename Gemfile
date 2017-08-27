@@ -65,3 +65,6 @@ gem 'devise'
 
 #Adding gem CanCanCan for Authorization
 gem 'cancancan', '~> 1.10'
+
+#Adding gem will_paginate to upload 10 comments at a time & for faster uploading
+gem 'will_paginate', '~> 3.1.1' 
