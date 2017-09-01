@@ -1,21 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row" id="new_prod">
-	<div class="col-sm-1 col-md-7">
-		<h1>Products</h1>
+<h1>Products</h1>
+
+<div class="container">
+
+	<div class="new_product">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+					<% if signed_in? && current_user.admin? %>
+						<span><%= link_to 'New Product', new_product_path %></span>
+					<% end %>
+				</div>
 		</div>
-		<div class="col-sm-1 col-md-5">
-		<span><%= link_to 'New Product', new_product_path %></span>
 	</div>
-</div>
 
-<div class="container" class="prod_range">
-    <div class="row">
-        <%= render @products %>
-    </div><!--/row-->
-
+	<div class="product_range">
+	    <div class="row">
+	        <%= render @products %>
+	    </div><!--/row-->
+	</div><!--/col-->
 </div><!--/container-->
-
 
 <%= link_to "Back", root_path, class:"btn btn-default" %>
 <br>
