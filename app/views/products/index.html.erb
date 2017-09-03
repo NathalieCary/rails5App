@@ -18,7 +18,12 @@
 	    <div class="row">
 	        <%= render @products %>
 	    </div><!--/row-->
-	</div><!--/col-->
+	</div>
+
+	<div class="apple_pagination">
+		<%= will_paginate @comments %>
+	</div>
+
 </div><!--/container-->
 
 <%= link_to "Back", root_path, class:"btn btn-default" %>
