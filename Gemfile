@@ -49,6 +49,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
 end
 
+# Adding factory-girl for testing
+group :development, :test do
+  gem "factory_girl_rails", "~> 4.0"
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -76,3 +81,10 @@ gem 'will_paginate', '~> 3.1.1'
 
 #Adding gem rails-controller-testing to write functional tests on controllers
 gem 'rails-controller-testing'
+
+
+
+
+
+
+
