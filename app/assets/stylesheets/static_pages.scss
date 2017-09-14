@@ -138,11 +138,11 @@ p {
 
 .circle {
 	margin: 80px auto 20px;
-  width: 210px;
-  height: 210px;
+  width: 150px;
+  height: 150px;
   border: 2px dotted #eee;
   border-radius: 50%;
-  line-height: 5px;
+  /*line-height: 3px;*/
   text-align: center;
   background: #fff;
 }
@@ -150,7 +150,9 @@ p {
 .circle h1 {
 	text-decoration: none;
 	font-family: $serif;
-	font-size: 4.5em;
+	margin-top: 20px;
+	/*font-size: 3em;*/
+
 }
 
 .circle h2 {

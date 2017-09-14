@@ -68,6 +68,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 #Adding gem device for Authentication
@@ -82,8 +83,8 @@ gem 'will_paginate', '~> 3.1.1'
 #Adding gem rails-controller-testing to write functional tests on controllers
 gem 'rails-controller-testing'
 
-
-
+#Adding gem stripe for payments
+gem 'stripe'
 
 
 

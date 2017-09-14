@@ -58,27 +58,37 @@ $paragraph-size: 1em;
 	padding-left: 10px;
 	text-decoration: none;
 	color: #F08080;
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 
 }
 
 .product_info h6 {		
 	text-decoration: none;
 	color: #F08080;
-	margin-left: 150px;
 	font-weight: bold;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+}
+
+.product_info h6 a {
+	color: #C2E6DC;
+}
+
+.product_info h6 a:hover {
+	background-color: transparent;
+	color: #F08080;
+	/*padding: 2px;*/
+	text-decoration: none;
 }
 
 .product_info p a {
-	color: #C2E6DC;
+	color: #F08080;
 	display: inline-block;
 }
 
 .product_info p a:hover {
-	background-color: #ddd;
-	color: #F08080;
-	padding: 2px;
+	background-color: transparent;
+	color: #C2E6DC;
+	/*padding: 2px;*/
 	text-decoration: none;
 }
 
@@ -104,17 +114,18 @@ $paragraph-size: 1em;
 	text-decoration: none;
 }
 
+.item_info {
+	margin-top: 5px;
+	padding: 20px;
+}
 
-
-
-
-#item_info strong {
+.item_info strong {
 	font-family: $serif;
 	font-size: 1.75em;
 	color: #DCDCDC;
 }
 
-#item_info p {
+.item_info p {
 	font-family: $sans-serif;
 	font-size: 1em;
 	color: #C2E6DC;
@@ -129,9 +140,8 @@ $paragraph-size: 1em;
 	border-radius: 5%;
 }
 
-.rated {
-	margin-left: 45%;
-	padding: 10px;
+.rated b {
+	margin-top: 30px;
 }
 
 .product-reviews p {
@@ -142,7 +152,7 @@ $paragraph-size: 1em;
   background: #f1f1f1;
   border: 1px solid #e5e5e5;
   text-align: center;
-  padding: 1em;
+  /*padding: 5px;*/
   cursor: default; }
   .apple_pagination a, .apple_pagination span {
     padding: 0.2em 0.3em; }
@@ -165,12 +175,14 @@ $paragraph-size: 1em;
     color: black; }
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline;
-      background: #C2E6DC;
-      color: #aaaaaa;
-      padding: 10px;
+      background: #f1f1f1;
+      color: #F08080;
+      text-decoration: none;
+
+      /*padding: 10px;
       -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
-    border-radius: 0.5em;
+    border-radius: 0.5em;*/
 
     }
 
@@ -181,3 +193,10 @@ $paragraph-size: 1em;
 /* Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+@media (max-width: 700px) {
+	.thumbnail {
+		margin-left: 0; margin-bottom: 20px;
+	}
+	
+}

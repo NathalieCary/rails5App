@@ -3,38 +3,28 @@
 	<p id="notice"><%= notice %></p>
 
 	<div class="row">
+
 		<div class="col-xs-12 col-md-7">
 				<%= image_tag(@product.image_url, class:"img-responsive thumbnail") %>
 		</div><br>
-		<div class="col-xs=12 col-md-5" id="item_info">
-			<p>
-			  <strong>Name:</strong><br>
-			  	<%= @product.name %>
-			</p><br>
-			<p>
-			  <strong>Description:</strong><br>
-			  	<%= @product.description %>
-			</p><br>
-			<!--<p>
-			  <strong>Image url:</strong><br>
-			  	<%= @product.image_url %>
-			</p><br>-->
-			<p>
-				<strong>Price:</strong><br>
-					<%= @product.price %>
-			</p>
 
+		<div class="col-xs=12 col-md-5 text-center item_info">
+			<p><strong>Name:</strong><br><%= @product.name %></p><br>
+			<p><strong>Description:</strong><br><%= @product.description %></p><br>
+			<p><strong>Price:</strong><br><%= @product.price %></p>
+			<!--<p><strong>Image url:</strong><br><%= @product.image_url %></p><br>-->
+			
 			<!--added a scope code to comment.rb file to select an array of records for best ratings-->
-			<p> 
-				<b>Highest Rating:</b>
-					<div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div>
-			</p><br>
-			<p> 
-				<b>Average Rating:</b>
-					<div class="rated" data-score="<%= @product.average_rating %>"></div> 
-			</p>
+			<p><b>Highest Rating:</b><div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p>
+			<p><b>Average Rating:</b><div class="rated" data-score="<%= @product.average_rating %>"></div></p> 
+
+			<%= form_with(url: '/payments/create') do |form| %>
+				<%= render partial: "shared/stripe_checkout_button" %>
+			<% end %>
+
 		</div>
 	</div>
+
 	<div class="comments">
 		<%= render partial: 'new_comment' %>
 		<%= render 'comments' %>
