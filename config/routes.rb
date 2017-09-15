@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
   end
+
+  resources :payments
   
 
   get 'static_pages/about'
@@ -19,6 +21,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   post 'static_pages/thank_you'
+
+  post 'payments/create'
 
   #root 'static_pages#landing_page'
 
