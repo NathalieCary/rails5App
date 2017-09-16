@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    #byebug
+    byebug
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   #corresponds with create method or action below
   def new
-    byebug
+    #byebug
     @product = Product.new
   end
 
