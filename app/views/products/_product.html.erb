@@ -3,6 +3,7 @@
 	<div class="col-xs-12 col-md-4 text-center product_info">
 		<%= image_tag(product.image_url, class: "img-responsive img-catalogue") %>
 			<h3><%= product.name %></h3>
+			logger.debug "Product: #{@product.name}"
 				<h5><%= product.description %></h5>
 					<h6>&#36;<%= product.price %>&nbsp;&nbsp;&nbsp;<%= link_to 'Show', product %></h6>
 						

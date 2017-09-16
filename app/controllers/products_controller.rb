@@ -7,8 +7,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+      logger.debug "Product: #{@products}"
     else
       @products = Product.all
+      logger.debug "Product: #{@products}"
     end
 
       @products = @products.paginate(:page => params[:page], :per_page => 9 )
@@ -19,11 +21,13 @@ class ProductsController < ApplicationController
   def show
     @comments = @product.comments.order("created_at DESC")
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 5 )
+    #logger.debug "Comments :#{@comments}"
   end
 
   # GET /products/new
   #corresponds with create method or action below
   def new
+    byebug
     @product = Product.new
   end
 
@@ -35,6 +39,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    #byebug
     @product = Product.new(product_params)
 
     respond_to do |format|
