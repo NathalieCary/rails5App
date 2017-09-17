@@ -86,6 +86,8 @@ gem 'rails-controller-testing'
 #Adding gem stripe for payments
 gem 'stripe'
 
+#Adding gem brakeman as a security scanner
+gem "brakeman", :require => false
 
 
 
