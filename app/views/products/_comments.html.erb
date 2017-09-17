@@ -1,6 +1,8 @@
 <div class="product-reviews">
     <% @comments.each do |comment| %>
-       
+
+       <%# logger.debug "Comments: #{@comments}"%>
+
        <%= render comment %> 
 
     <% end %>
