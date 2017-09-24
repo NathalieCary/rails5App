@@ -16,5 +16,18 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+
+// Jquery image zoom plugin
+  $(".img-zoom").elevateZoom ({
+    zoomType: "lens",
+    lensShape: "round",
+    lensSize: "200"
+  });
+
+//Jquery sliphover plugin
+  $("#about").sliphover( {
+    backgroundColor: 'rgba(192,192,192,0.8)'
+  });
+
 });
 
