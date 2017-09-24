@@ -1,5 +1,4 @@
-
-$(document).on('turbolinks:load', function(){
+var refreshRating = function () {
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -16,6 +15,13 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+};
+
+
+$(document).on('turbolinks:load ajaxSuccess', function(){
+  
+//ratty for ratings
+  refreshRating();
 
 // Jquery image zoom plugin
   $(".img-zoom").elevateZoom ({
@@ -26,7 +32,8 @@ $(document).on('turbolinks:load', function(){
 
 //Jquery sliphover plugin
   $("#about").sliphover( {
-    backgroundColor: 'rgba(192,192,192,0.8)'
+    backgroundColor: 'rgba(192,192,192,0.5)'
+
   });
 
 });
