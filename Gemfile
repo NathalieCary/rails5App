@@ -89,5 +89,6 @@ gem 'stripe'
 #Adding gem brakeman as a security scanner
 gem "brakeman", :require => false
 
-
+#Adding gem dalli for cache
+gem 'dalli'
 

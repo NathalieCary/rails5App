@@ -9,10 +9,13 @@
 		</div><br>
 
 		<div class="col-xs=12 col-md-5 text-center item_info">
-			<p><strong>Name:</strong><br><%= @product.name %></p><br>
-			<p><strong>Description:</strong><br><%= @product.description %></p><br>
-			<p><strong>Price:</strong><br><%= @product.price %></p>
-			<!--<p><strong>Image url:</strong><br><%= @product.image_url %></p><br>-->
+
+			<% cache @product do %>
+				<p><strong>Name:</strong><br><%= @product.name %></p><br>
+				<p><strong>Description:</strong><br><%= @product.description %></p><br>
+				<p><strong>Price:</strong><br><%= @product.price %></p>
+				<!--<p><strong>Image url:</strong><br><%= @product.image_url %></p><br>-->
+			<% end %>
 			
 			<!--added a scope code to comment.rb file to select an array of records for best ratings-->
 			<p><b>Highest Rating:</b><div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p>
