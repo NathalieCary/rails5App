@@ -1,22 +1,25 @@
-<div container-fluid class="product_show">
-
+<div>
 	<p id="notice"><%= notice %></p>
+</div>
 
+<div container-fluid class="product_show">
 	<div class="row">
-
 		<div class="col-xs-12 col-md-7">
 				<%= image_tag(@product.image_url, class:"img-responsive thumbnail img-zoom", data_zoom_image: "@product.image_url") %>
 		</div><br>
 
 		<div class="col-xs=12 col-md-5 text-center item_info">
-
 			<% cache @product do %>
 				<p><strong>Name:</strong><br><%= @product.name %></p><br>
 				<p><strong>Description:</strong><br><%= @product.description %></p><br>
 				<p><strong>Price:</strong><br><%= @product.price %></p>
 				<!--<p><strong>Image url:</strong><br><%= @product.image_url %></p><br>-->
 			<% end %>
-			
+			<h3 class="viewed">Views:
+			<span class="badge">
+			    <%= @product.views %>
+			 </span>
+			</h3> 
 			<!--added a scope code to comment.rb file to select an array of records for best ratings-->
 			<p><b>Highest Rating:</b><div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p>
 			<p><b>Average Rating:</b><div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p> 
@@ -28,6 +31,8 @@
 
 		</div>
 	</div>
+
+	
 
 	<div class="comments">
 		<%= render partial: 'new_comment' %>

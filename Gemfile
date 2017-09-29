@@ -92,3 +92,6 @@ gem "brakeman", :require => false
 #Adding gem dalli for cache
 gem 'dalli'
 
+#Adding gem redis-rails which is an advanced key-value store
+gem 'redis-rails'
+

@@ -190,6 +190,16 @@ $paragraph-size: 1em;
 	color: red;
 }
 
+.viewed {
+	margin-top: 20px; margin-bottom: 20px;
+	color: #F08080;
+}
+
+.viewed .badge {
+	padding: 10px;
+	border-radius: 50%;
+}
+
 /* Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
