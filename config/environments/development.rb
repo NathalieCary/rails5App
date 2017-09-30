@@ -54,4 +54,7 @@ Rails.application.configure do
 
   # Added this line so that any dynamic links that show up inside emails from my development environment will generate the right URLs.
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  # Added this tells rails generator to generate plain JS instead of CoffeeScript for ActionCable
+  config.app_generators.javascript_engine = :javascript
 end
