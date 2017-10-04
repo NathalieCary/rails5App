@@ -1,4 +1,4 @@
-<% cache product do %>
+<!--<%# cache product do %>-->
 	<a>
 		<div class="col-xs-12 col-md-4 text-center product_info">
 			<%= image_tag(product.image_url, class: "img-responsive img-catalogue") %>
@@ -8,11 +8,17 @@
 						<h6>&#36;<%= product.price %>&nbsp;&nbsp;&nbsp;<%= link_to 'Show', product %></h6>
 							
 
-			<% if signed_in? && current_user.admin? %>
+			<% if current_user && current_user.admin? %>
 				<p><%= link_to 'Edit', edit_product_path(product) %></p>
+			<% end %>
+
+
+			<% if current_user && current_user.admin? %>	
 				<p><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 			<% end %>
+
+
 		</div><!-- /col -->
 	</a>
-<% end %>
+<%# end %>
    
