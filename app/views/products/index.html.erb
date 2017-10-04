@@ -7,7 +7,7 @@
 	<div class="new_product">
 		<div class="row">
 			<div class="col-xs-12 col-md-12">
-					<% if signed_in? && current_user.admin? %>
+					<% if current_user && current_user.admin? %>
 						<span><%= link_to 'New Product', new_product_path %></span>
 					<% end %>
 				</div>

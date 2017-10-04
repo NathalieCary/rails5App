@@ -3,12 +3,16 @@
 </div>
 
 <div container-fluid class="product_show">
-	<div class="row">
+	
+	<div class="row" data-product-id="<%= @product.id %>">
+
 		<div class="col-xs-12 col-md-7">
 				<%= image_tag(@product.image_url, class:"img-responsive thumbnail img-zoom", data_zoom_image: "@product.image_url") %>
 		</div><br>
 
+
 		<div class="col-xs=12 col-md-5 text-center item_info">
+
 			<% cache @product do %>
 				<p><strong>Name:</strong><br><%= @product.name %></p><br>
 				<p><strong>Description:</strong><br><%= @product.description %></p><br>
@@ -34,20 +38,24 @@
 
 	
 	<div class="comments">
+
 		<%= render partial: 'new_comment' %>
-			<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-				<%= render 'comments' %>
+		<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+		<%= render 'comments' %>
+	
 	</div>
 
+	
 	<div class="apple_pagination">
+
 		<%= will_paginate @comments %>
+
 	</div>
 		
 </div><!--/container-->
 <br>
 <br>
 
-<% if signed_in? && current_user.admin? %>
-	<%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default" %> 
-<% end %> 
-<%= link_to 'Back', products_path, class:"btn btn-default" %>
+	<% if current_user && current_user.admin? %>
+	<%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default" %> | <% end %> 
+	<%= link_to 'Back', products_path, class:"btn btn-default" %>
