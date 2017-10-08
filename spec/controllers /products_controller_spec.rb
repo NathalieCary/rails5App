@@ -66,8 +66,8 @@ describe ProductsController, type: :controller do
 		end 
 
 		it 'updates a product sucessfully' do
-			@update = { name: "Classic Ring", image_url: "images.com", id:@product.id, price:@product.price }
-			patch :update, params: { id: @product.id, product: @update }
+			@params = { name: "Classic Ring", image_url: "images.com", id: @product.id, price: @product.price }
+			patch :update, params: { id: @product.id, product: @params }
 			@product.reload
 			expect(@product.name).to eq "Classic Ring"
 		end	

@@ -19,13 +19,12 @@
 				<p><strong>Price:</strong><br><%= @product.price %></p>
 				<!--<p><strong>Image url:</strong><br><%= @product.image_url %></p><br>-->
 			<% end %>
-			<h3 class="viewed">Views:
-			<span class="badge">
-			    <%= @product.views %>
-			 </span>
+			
+			<h3 class="viewed">Views:<span class="badge"><%= @product.views %></span>
+
 			</h3> 
 			<!--added a scope code to comment.rb file to select an array of records for best ratings-->
-			<p><b>Highest Rating:</b><div class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p>
+			<p><b>Highest Rating:</b><div id="highest-rating" class="rated" data-score="<%= @product.highest_rating_comment.try(:rating) %>"></div></p>
 			<p><b>Average Rating:</b><div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></p> 
 
 			<%= form_with(url: '/payments/create') do |form| %>

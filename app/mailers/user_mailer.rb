@@ -10,7 +10,17 @@ class UserMailer < ApplicationMailer
 
   def welcome(user)
     @user = user
-    mail to: user.email, subject: "Welcome to Desire"
+    mail(from: 'nathalie19@live.co.za',
+         to: user.email,
+         subject: "Welcome to Desire!!!")
+  end
+
+  def order_placed(user, product)
+    @user = user
+    @product = product
+    mail(from: 'nathalie19@live.co.za',
+         to: user.email,
+         subject: "Your order of the #{product.name} has been placed.")
   end
 
 end

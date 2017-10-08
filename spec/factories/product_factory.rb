@@ -6,9 +6,4 @@ FactoryGirl.define do
 		price "555.00"
 	end
 
-	factory :comment do
-		rating "5"
-		body "beautiful"
-	end
-
 end

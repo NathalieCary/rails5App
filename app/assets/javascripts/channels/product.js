@@ -13,6 +13,7 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
     $(".alert.alert-info").show();
     $('.product-reviews').prepend(data.comment);
     $("#average-rating").attr('data-score', data.average_rating);
+    $('#highest-rating').attr('data-score', data.highest_rating_comment)
     refreshRating();
   },
   
