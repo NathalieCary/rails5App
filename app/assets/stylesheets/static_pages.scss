@@ -236,6 +236,19 @@ p {
 	height: 300px;
 }
 
+/*Payments Created page */
+.payment_page p {
+	margin-top: 20px;
+}
+
+.payment_page a:hover {
+	color: #5e5e5e;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+
 /*Footer*/
 
 .copyright {
@@ -269,4 +282,12 @@ footer {
 	bottom: 0;
 	height: 80px;
 	width: 100%;
+}
+
+@media (max-width: 770px) {
+	.form-control {
+	width: 100%;
+	margin: 0 auto;
+}
+
 }

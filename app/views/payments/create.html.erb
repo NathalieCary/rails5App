@@ -1,10 +1,9 @@
-<div class="container payment_page">
+<div class="container">
 	<div class="row">
-	<div class="col-sm-6 col-xs-12">
-		<h4>Thank you for purchasing with us</h4>
-			<h4>We look forward to seeing you again soon</h4>
-				<p>Please leave us a <%= link_to 'comment', product_path(@product) %></p>
-				<p>You may also be interested in these <%link_to 'products', product_path(@product) %>
-	</div>
+		<div class="col-md-12 col-xs-12 payment_page">
+			<h1>Thank you for purchasing with us</h1>
+				<p>We would love to hear from you, please leave us a <%= link_to 'comment', product_path(@product) %></p>
+				<p>Alternatively, you may also be interested in these <%= link_to "Products", products_path %>
+		</div>
 	</div>
 </div>

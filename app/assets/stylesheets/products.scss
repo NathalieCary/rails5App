@@ -26,7 +26,7 @@ $paragraph-size: 1em;
 
 
 #notice {
-	margin-top: 80px;
+	margin-top: 100px;
 }
 
 .img-catalogue {
@@ -47,6 +47,10 @@ $paragraph-size: 1em;
 
 .field_with_errors {
 	margin-left: 25%;
+}
+
+.product_show {
+	margin-top: 80px
 }
 
 .product_info {
@@ -195,6 +199,8 @@ $paragraph-size: 1em;
 	background-color: #eee;
 	border: 2px dotted #F08080;
 }
+
+
 
 /* Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
