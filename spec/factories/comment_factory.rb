@@ -6,5 +6,4 @@ FactoryGirl.define do
 		body "beautiful"
 		
 	end
-
 end

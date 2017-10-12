@@ -14,19 +14,22 @@ class PaymentsController < ApplicationController
 	        :currency => "nzd",
 	        :source => token,
 	        :description => params[:stripeEmail],
-	        :receipt_email => params[:stripeEmail]
+	        #:receipt_email => params[:stripeEmail]
 	      )
 	      if charge.paid
-	        Order.create(product_id: @product.id, user_id: @user.id, total: @product.price.to_i)
-	        UserMailer.order_placed(@user, @product).deliver_now
+	        Order.create(
+	        	product_id: @product.id, 
+	        	user_id: @user.id, 
+	        	total: @product.price.to_i)
+	        	UserMailer.order_placed(@user, @product).deliver_now
+	        	flash[:notice] = "Your payment was processed successfully"
 	      end
 
 	    rescue Stripe::CardError => e
-	      # When the card has been declined
 	      body = e.json_body
 	      err = body[:error]
-	      flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
-    end
+	      	flash[:alert] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
+    	end
    end
 end
 

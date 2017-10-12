@@ -8,11 +8,6 @@ require 'rails_helper'
             #let(:user) { User.create!(first_name: "ryan", last_name: "cary", email: "elemantz@hotmail.com", password: "elemantz")}
             @product = FactoryGirl.create(:product)
             @user = FactoryGirl.create(:user)
-            #@comment = FactoryGirl.create_list(:comment, :product)
-            #@comment = FactoryGirl.create(rating: 1, user: @user, body: "Awful bike!")
-           # @comment = FactoryGirl.create(rating: 3, user: @user, body: "Ok bike!")
-            #@comment = FactoryGirl.create(rating: 5, user: @user, body: "Great bike!")
-
             @product.comments.create!(rating: 1, user: @user, body: "Awful bike!")
             @product.comments.create!(rating: 3, user: @user, body: "Ok bike!")
             @product.comments.create!(rating: 5, user: @user, body: "Great bike!")

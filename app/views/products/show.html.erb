@@ -1,13 +1,9 @@
-<div>
-	<p id="notice"><%= notice %></p>
-</div>
-
 <div container-fluid class="product_show">
 	
 	<div class="row" data-product-id="<%= @product.id %>">
 
 		<div class="col-xs-12 col-md-7">
-				<%= image_tag(@product.image_url, class:"img-responsive thumbnail img-zoom", data_zoom_image: "@product.image_url") %>
+			<%= image_tag(@product.image_url, class:"img-responsive thumbnail img-zoom", data_zoom_image: "@product.image_url") %>
 		</div><br>
 
 
