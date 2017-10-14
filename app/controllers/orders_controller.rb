@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
-before_action :authenticate_user!
-before_action :admin_only
+load_and_authorize_resource
 
 	def index
 		@orders = Order.all
